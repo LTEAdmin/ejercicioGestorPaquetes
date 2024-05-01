@@ -1,4 +1,5 @@
-import  chalk from 'chalk';
+// para usar chalk con requiere se debe tener una version menor a 4.19 del chalk
+import chalk from 'chalk';
 
 console.log(chalk.blue('Hello world!'));
 console.log(chalk.red.bgBlue.bold('Hello world!'));
