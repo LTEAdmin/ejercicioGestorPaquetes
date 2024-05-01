@@ -5,7 +5,7 @@
 import { v4 as uuidv4 } from 'uuid'; // importa el modulo uuid
 
 // forma normal con 32 caracteres
-const id = uuidv4();
+/* const id = uuidv4();
 // forma de recortar el id, valor inicial y valor final
 const id2 = uuidv4().slice(0, 15);
 console.log(id);
@@ -18,4 +18,21 @@ const persona = {
     name: "Alejandra",
     age: 25,
 }
-console.log(persona)
+console.log(persona) */
+
+const Usuarios = [];
+
+function registrarUsuario(name, age, email) {
+    const newuser = {
+        id: uuidv4().slice(0, 8),
+        name,
+        age,
+        email
+    }
+    Usuarios.push(newuser);
+    console.log(Usuarios);
+    return newuser; 
+}; 
+const usuario1 = registrarUsuario("ale", 25, "ale@ale");
+const usuario2 = registrarUsuario("pedro", 25, "pedro@pedro");
+const usuario3 = registrarUsuario("jose", 25, "jose@jose"); 
