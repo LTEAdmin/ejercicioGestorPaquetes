@@ -22,6 +22,11 @@ console.log(persona) */
 
 const Usuarios = [];
 
+//la funcion tambien se puede definir de la siguiente forma
+//function registrarUsuario(uuidv4().slice(0, 8), name, age, email){} 
+//en este caso el id se pasa por parametro
+    
+
 function registrarUsuario(name, age, email) {
     const newuser = {
         id: uuidv4().slice(0, 8),
