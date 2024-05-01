@@ -3,6 +3,7 @@
 // si se usa es5 esta es la forma de definir el modulo de uso de uuid
 
 import { v4 as uuidv4 } from 'uuid'; // importa el modulo uuid
+import getId from './helper/getid.js';
 
 // forma normal con 32 caracteres
 /* const id = uuidv4();
@@ -35,9 +36,26 @@ function registrarUsuario(name, age, email) {
         email
     }
     Usuarios.push(newuser);
-    console.log(Usuarios);
     return newuser; 
 }; 
+
+console.log("---------------------");
 const usuario1 = registrarUsuario("ale", 25, "ale@ale");
 const usuario2 = registrarUsuario("pedro", 25, "pedro@pedro");
 const usuario3 = registrarUsuario("jose", 25, "jose@jose"); 
+
+function registrarUsuario2(getid,name, age, email) {
+    const newuser = {
+        id: getid,
+        name,
+        age,
+        email
+    }
+    Usuarios.push(newuser);
+    return newuser; 
+}; 
+console.log('---------------------');
+const usuario4 = registrarUsuario2(getId(), "luis", 25, "luis@luis");   
+const usuario5 = registrarUsuario2(getId(), "maria", 25, "maria@maria");
+
+console.log(Usuarios);
